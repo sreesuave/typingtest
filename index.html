@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">TYPE LIEGE</h1>
+       
+        <div class="typing-box">
+            <p id="quote" class="quote-text">Loading...</p>
+            <input type="text" id="input-box" placeholder="Start typing..." autofocus>
+        </div>
+        <div class="buttons">
+            <button onclick="newGame()" class="game-button">New Game</button>
+            <button onclick="calculateResults()" class="game-button">Submit</button>
+        </div>
+        <div id="keyboard"></div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <p id="popup-result"></p>
+        <button onclick="closePopup()" class="close-button">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

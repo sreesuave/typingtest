@@ -1,0 +1,202 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    margin: 0;
+    color: white;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: transparent;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    -webkit-text-stroke: 2px #ff8c00;
+    text-shadow: 0px 0px 10px #ff8c00;
+}
+
+.container {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.5);
+    text-align: center;
+    width: 50%;
+    min-width: 320px;
+    max-width: 600px;
+}
+
+#quote {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+#input-box {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ff8c00;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    background: #333;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;  /* Increased gap between buttons */
+    justify-content: center;
+    margin-top: 30px; /* Reduced margin so it looks balanced */
+}
+
+
+
+.game-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ff8c00;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.game-button:hover {
+    background: #e67e00;
+    transform: scale(1.05);
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.key {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #444;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.2s, transform 0.1s;
+    border: 2px solid #ff8c00;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key.active {
+    background: #ff8c00;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5); /* Transparent black */
+        backdrop-filter: blur(10px); /* Blur effect */
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 0 15px #ff8c00;
+        max-width: 250px;
+        width: 80%;
+        font-size: 1em;
+        transition: all 0.3s ease-in-out;
+    }
+    
+
+
+.popup-content {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff8c00;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.popup button:hover {
+    background: #e67e00;
+    transform: scale(1.1);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make it fit smaller screens */
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.5em; /* Adjust title size */
+    }
+
+    #input-box {
+        height: 60px; /* Reduce input size for mobile */
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons on small screens */
+        gap: 15px;
+    }
+
+    .game-button {
+        width: 100%; /* Full-width buttons */
+    }
+
+    .row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .key {
+        width: 35px; /* Smaller keys */
+        height: 35px;
+        font-size: 0.9em;
+    }
+
+    .popup {
+        max-width: 90%; /* Adjust popup size */
+        font-size: 0.9em;
+    }
+}
